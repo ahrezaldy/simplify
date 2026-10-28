@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --bg: #ffffff;
+  --bg-soft: #f4f8f5;
+  --fg: #2b2f2c;
+  --fg-muted: #5f6661;
+  --line: #dfe7e1;
+  --brand: #1baa56;
+  --brand-deep: #0e7a3c;
+  --brand-soft: #e3f5ea;
+  --accent: #ffc107;
+  --charcoal: #3f3f3f;
+  --card: #ffffff;
+  --divider-bg: #1baa56;
+  --divider-fg: #ffffff;
+}
+
+.dark {
+  --bg: #1a2a21;
+  --bg-soft: #24372c;
+  --fg: #eef6f0;
+  --fg-muted: #b4c6ba;
+  --line: #3a5245;
+  --brand: #2ec26a;
+  --brand-deep: #1baa56;
+  --brand-soft: #1f4a32;
+  --accent: #ffcc33;
+  --charcoal: #3c5245;
+  --card: #2a3f33;
+  --divider-bg: #146b3a;
+  --divider-fg: #f0fff5;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-bg-soft: var(--bg-soft);
+  --color-fg: var(--fg);
+  --color-fg-muted: var(--fg-muted);
+  --color-line: var(--line);
+  --color-brand: var(--brand);
+  --color-brand-deep: var(--brand-deep);
+  --color-brand-soft: var(--brand-soft);
+  --color-accent: var(--accent);
+  --color-charcoal: var(--charcoal);
+  --color-card: var(--card);
+  --color-divider-bg: var(--divider-bg);
+  --color-divider-fg: var(--divider-fg);
+  --font-sans: var(--font-lato);
+  --font-mono: var(--font-geist-mono);
+}
+
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-lato), system-ui, sans-serif;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
+}
+
+::selection {
+  background: var(--brand);
+  color: white;
+}
